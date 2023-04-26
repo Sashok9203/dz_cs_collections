@@ -42,7 +42,7 @@ namespace Task5
         public int Pop()
         {
             int tmp = tower.Pop();
-            if (DrawChange) Print(printDelay);
+            if (DrawChange) Print(0);
             return tmp;
         }
 

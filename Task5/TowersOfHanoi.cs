@@ -28,21 +28,21 @@ namespace Task5
             while (tower3.Count != diskCount)
             {
 
-                if (tower3.Count == 0 && tower1.Count != 0 || tower1.Count != 0 && tower1.Peek() < tower3.Peek())
+                if (tower3.IsEmpty && !tower1.IsEmpty || !tower1.IsEmpty && tower1.Peek() < tower3.Peek())
                         tower3.Push(tower1.Pop());
-                else if (tower1.Count == 0 && tower3.Count != 0 || tower3.Count != 0 && tower3.Peek() < tower1.Peek())
+                else if (tower1.IsEmpty && !tower3.IsEmpty || !tower3.IsEmpty && tower3.Peek() < tower1.Peek())
                         tower1.Push(tower3.Pop());
                   
-                if (tower2.Count == 0 && tower1.Count != 0 || tower1.Count != 0 && tower1.Peek() < tower2.Peek())
+                if (tower2.IsEmpty && !tower1.IsEmpty || !tower1.IsEmpty && tower1.Peek() < tower2.Peek())
                         tower2.Push(tower1.Pop());
-                else if (tower1.Count == 0 && tower2.Count != 0 || tower2.Count != 0 && tower2.Peek() < tower1.Peek())
+                else if (tower1.IsEmpty && !tower2.IsEmpty || !tower2.IsEmpty && tower2.Peek() < tower1.Peek())
                         tower1.Push(tower2.Pop());
 
                 if (tower3.Count != diskCount)
                 {
-                    if (tower3.Count == 0 && tower2.Count != 0 || tower2.Count != 0 && tower2.Peek() < tower3.Peek())
+                    if (tower3.IsEmpty && !tower2.IsEmpty || !tower2.IsEmpty && tower2.Peek() < tower3.Peek())
                         tower3.Push(tower2.Pop());
-                    else if (tower2.Count == 0 && tower3.Count != 0 || tower3.Count != 0 && tower3.Peek() < tower2.Peek())
+                    else if (tower2.IsEmpty && !tower3.IsEmpty || !tower3.IsEmpty && tower3.Peek() < tower2.Peek())
                         tower2.Push(tower3.Pop());
                 }
             }

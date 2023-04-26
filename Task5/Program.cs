@@ -8,7 +8,7 @@ namespace Task5
         {
             Console.CursorVisible = false;
             const int DiskCount = 5; 
-            TowersOfHanoi toh = new(DiskCount, 1000/ DiskCount, 1, 1);
+            TowersOfHanoi toh = new(DiskCount, 2000/ DiskCount, 1, 1);
             toh.Start();
         }
     }
