@@ -1,16 +1,15 @@
-﻿namespace Task5
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Task5
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            const int levelCount = 4;
-            Stack<int> tower1 = new(), tower2 = new(), tower3 = new();
-
-            for (int i = levelCount * 2 - 1; i > 0; i -= 2)
-                tower1.Push(i);
-
-
+            Console.CursorVisible = false;
+            const int DiskCount = 5; 
+            TowersOfHanoi toh = new(DiskCount, 1000/ DiskCount, 1, 1);
+            toh.Start();
         }
     }
 }
