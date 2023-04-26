@@ -11,10 +11,8 @@ namespace Task5
         private Tower tower1,tower2,tower3;
         private readonly int diskCount;
         private readonly int maxLength;
-        private int steps; 
         public TowersOfHanoi(int diskCount ,int printDelay,int X,int Y)
         {
-            steps = 1;
             this.diskCount = diskCount;
             maxLength = diskCount * 2 - 1;
             tower1 = new(diskCount, maxLength, printDelay, X, Y);
