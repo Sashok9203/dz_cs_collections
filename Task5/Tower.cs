@@ -8,5 +8,6 @@ namespace Task5
 {
     internal class Tower
     {
+        
     }
 }
